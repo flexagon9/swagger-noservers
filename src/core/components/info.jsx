@@ -123,7 +123,6 @@ export default class Info extends React.Component {
     const Markdown = getComponent("Markdown", true)
     const Link = getComponent("Link")
     const VersionStamp = getComponent("VersionStamp")
-    const InfoUrl = getComponent("InfoUrl")
     const InfoBasePath = getComponent("InfoBasePath")
 
     return (
@@ -133,7 +132,7 @@ export default class Info extends React.Component {
             { version && <VersionStamp version={version}></VersionStamp> }
           </h2>
           { host || basePath ? <InfoBasePath host={ host } basePath={ basePath } /> : null }
-          { url && <InfoUrl getComponent={getComponent} url={url} /> }
+          
         </hgroup>
 
         <div className="description">
